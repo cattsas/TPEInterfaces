@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Josefin+Sans:wght@100;400&family=Orbitron:wght@900&family=Staatliches&display=swap');
+@keyframes scroll {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: -1200px;
+    }
+}
+
+.cont_contJuego {
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow_container a {
+    font-family: 'Orbitron';
+    color: rgb(137, 64, 255);
+    font-size: 2rem;
+}
+
+#juego_menu h1 {
+    margin: 0;
+    font-size: 100px;
+    font-family: 'Orbitron';
+    color: rgba(225, 225, 0, 0.01);
+    background-image: url('../images/backgrounds/2109.w026.n002.818B.p1.818.jpg');
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#juego_menu h2 {
+    font-family: 'Orbitron';
+    background: linear-gradient(to bottom, rgb(137, 64, 255) 0%, #ec5c19 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.gameMenu {
+    background-color: black;
+    color: white;
+}
+
+.alienButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#btn_jugar,
+#btn_salir {
+    font-family: 'Orbitron';
+    color: rgb(137, 64, 255);
+    font-size: 2rem;
+    background-color: rgba(225, 225, 0, 00);
+    width: 8rem;
+    margin: auto;
+}
+
+#btn_jugar:hover,
+#btn_salir:hover {
+    color: rgb(119, 223, 15);
+    ;
+}
+
+#btn_jugar {
+    margin-bottom: 1rem;
+}
+
+.gameContainer {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    top: 4.5rem;
+    overflow: hidden;
+}
+
+.alienInfo {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+    padding: 1rem;
+}
+
+.alienInfo img {
+    height: 48px;
+    width: 48px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    max-height: 3rem;
+}
+
+#points {
+    width: 4rem;
+    color: rgb(119, 223, 15);
+    background-color: rgba(255, 0, 0, 0);
+    border-style: none;
+    font-family: 'Orbitron';
+    font-size: 1.8rem;
+    padding: 0;
+    text-align: center;
+}
+
+.layer {
+    min-width: 500px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat-x;
+}
+
+.layer10 {
+    background-image: url('../images/backgrounds/sky_01.png');
+}
+
+.layer9 {
+    background-image: url('../images/backgrounds/building_01.png');
+    animation: scroll 20s infinite linear;
+    position: absolute;
+    top: 10.7rem;
+    height: 389px;
+}
+
+.layer8 {
+    background-image: url('../images/backgrounds/pavement_01.png');
+    animation: scroll 15s infinite linear;
+    position: absolute;
+    top: 32.5rem;
+    height: 35px;
+}
+
+.layer7 {
+    background-image: url('../images/backgrounds/ruins_01.png');
+    animation: scroll 10s infinite linear;
+    position: absolute;
+    top: 29rem;
+    height: 95px;
+}
+
+.layer6 {
+    background-image: url('../images/backgrounds/building_02.png');
+    animation: scroll 5s infinite linear;
+    position: absolute;
+    top: 16rem;
+    height: 308px;
+}
+
+.layer5 {
+    background-image: url('../images/backgrounds/humo_.png');
+    animation: scroll 5s infinite linear;
+    position: absolute;
+    opacity: 0.7;
+    height: 600px;
+}
+
+.layer3 {
+    background-image: url('../images/backgrounds/fire_01\ \(1\).png');
+    animation: scroll 5s infinite linear;
+    top: 16rem;
+    height: 314px;
+}
+
+.layer1 {
+    background-image: url('../images/backgrounds/road_s.png');
+    animation: scroll 3s infinite linear;
+    position: absolute;
+    top: 34rem;
+    height: 57px;
+}
+
+.character_init {
+    width: 72px;
+    height: 100px;
+    margin-left: 200px;
+    position: absolute;
+    top: 30rem;
+}
+
+.changeChar:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.starPoints {
+    position: absolute;
+    top: 26rem;
+    animation: aproach 3s linear infinite;
+    visibility: hidden;
+}
+
+.starMove {
+    background: url('../images/iconos alien/stars-removebg-preview.png');
+    -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    width: 50px;
+    height: 50px;
+}
+
+.alienFloor {
+    position: absolute;
+    top: 33rem;
+    animation: aproach 2s linear;
+    visibility: hidden;
+}
+
+.alien_walk {
+    background: url('../images/characters/Storm_sprites_07-removebg-preview.png');
+    animation: alienwalking 1.5s steps(3) infinite;
+    width: 71.33px;
+    height: 62px;
+}
+
+.alienSky {
+    position: absolute;
+    top: 24rem;
+    animation: aproach 2s linear;
+    visibility: hidden;
+}
+
+.alien_fly {
+    background: url('../images/characters/Storm_sprites_10-removebg-preview.png');
+    animation: alienflying 0.5s steps(2) infinite;
+    width: 110px;
+    height: 114px;
+}
+
+.caminando_cody {
+    background: url('../images/characters/walk-cody-2.png')left center;
+    animation: walk 1s steps(12) infinite;
+}
+
+.caminando_haagar {
+    background: url('../images/characters/walk-hagar.png')left center;
+    animation: walkHaagar 1s steps(12) infinite;
+    width: 92px;
+}
+
+.saltando_cody {
+    background: url('../images/characters/jump-cody.png')left center;
+    animation: jump 0.8s steps(8) infinite;
+    width: 88px;
+    height: 126px;
+}
+
+.saltando_haagar {
+    background: url('../images/characters/jump-haagar.png')left center;
+    animation: jumpHaagar 0.8s steps(5) infinite;
+    width: 80px;
+    height: 126px;
+}
+
+.deslizando_cody {
+    background: url('../images/characters/cody-slide.png')left center;
+    animation: down 0.7s steps(6) infinite;
+    width: 95px;
+    height: 80px;
+    top: 31rem;
+}
+
+.deslizando_haagar {
+    background: url('../images/characters/slide_haagar.png')left center;
+    animation: downHaagar 0.7s steps(5) infinite;
+    width: 92px;
+    height: 80px;
+    top: 31rem;
+}
+
+.muriendo_cody {
+    background: url('../images/characters/cody-muere.png')left center;
+    animation: dieCody 1s steps(4);
+    width: 125px;
+    z-index: 999;
+}
+
+.muerto_cody {
+    background: url('../images/characters/cody-muere.png');
+    width: 125px;
+    background-position: -392px !important;
+    z-index: 999;
+}
+
+.ganando_cody {
+    background: url('../images/characters/festejo-cody.png')left center;
+    animation: winCody 0.8s steps(4);
+    width: 110px;
+    height: 110px;
+    z-index: 999;
+    top: 29rem;
+}
+
+.gano_cody {
+    background: url('../images/characters/festejo-cody.png')left center;
+    width: 110px;
+    height: 112px;
+    background-position: -303px !important;
+    top: 29rem;
+}
+
+.ganando_haagar {
+    background: url('../images/characters/festejo-haggar.png')left center;
+    animation: winHaagar 0.8s steps(4);
+    width: 95px;
+    height: 110px;
+    z-index: 999;
+    top: 29rem;
+}
+
+.gano_haagar {
+    background: url('../images/characters/festejo-haggar.png')left center;
+    width: 100px;
+    height: 112px;
+    background-position: -296px !important;
+    top: 29rem;
+}
+
+.muriendo_haagar {
+    background: url('../images/characters/haagar-muere.png')left center;
+    animation: dieHaagar 1s steps(3);
+    width: 135px;
+    z-index: 999;
+}
+
+.muerto_haagar {
+    background: url('../images/characters/haagar-muere.png');
+    width: 135px;
+    background-position: -292px !important;
+    z-index: 999;
+}
+
+#juego_final {
+    position: absolute;
+    top: -2rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: rgb(119, 223, 15);
+    font: 2rem 'Orbitron';
+    background-color: rgba(255, 100, 100, 0);
+}
+
+#juego_final a {
+    color: rgb(240, 243, 61);
+}
+
+#juego_final h1 {
+    margin-bottom: 0;
+}
+
+#youLose,
+#youWin {
+    height: 100%;
+    -webkit-animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.out_star {
+    -webkit-animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.jello_horizontal {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+            animation-delay:0.4s;
+            -webkit-animation-delay: 0.4s;
+}
+.back_to_play{
+    background-color: rgba(107, 107, 107, 0.5);
+}
+.back_to_play:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+
+@-webkit-keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-416px) translateX(600px);
+        transform: translateY(-416px) translateX(600px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-416px) translateX(600px);
+        transform: translateY(-416px) translateX(600px);
+        opacity: 0;
+    }
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -896px;
+    }
+}
+
+@keyframes walkHaagar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1229px;
+    }
+}
+
+@keyframes dieCody {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -523px;
+    }
+}
+
+@keyframes winCody {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -405px;
+    }
+}
+
+@keyframes winHaagar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -398px;
+    }
+}
+
+@keyframes dieHaagar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -437px;
+    }
+}
+
+@keyframes down {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -617px;
+    }
+}
+
+@keyframes downHaagar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -479px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -761px;
+    }
+    0% {
+        top: 26rem;
+    }
+    50% {
+        top: 24rem;
+    }
+    100% {
+        top: 26rem;
+    }
+}
+
+@keyframes jumpHaagar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -421px;
+    }
+    0% {
+        top: 26rem;
+    }
+    50% {
+        top: 24rem;
+    }
+    100% {
+        top: 26rem;
+    }
+}
+
+@keyframes alienwalking {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -424px;
+    }
+}
+
+@keyframes aproach {
+    0% {
+        left: 1000px;
+        visibility: hidden;
+    }
+    8% {
+        left: 900px;
+        visibility: hidden;
+    }
+    16% {
+        left: 800px;
+        visibility: hidden;
+    }
+    20% {
+        left: 750px;
+        visibility: hidden;
+    }
+    24% {
+        left: 700px;
+        visibility: visible;
+    }
+    32% {
+        left: 600px;
+    }
+    40% {
+        left: 500px;
+    }
+    48% {
+        left: 400px;
+    }
+    56% {
+        left: 300px;
+    }
+    64% {
+        left: 200px;
+    }
+    72% {
+        left: 100px;
+    }
+    80% {
+        left: 0px;
+    }
+    82% {
+        left: -25px;
+        visibility: hidden;
+    }
+    88% {
+        left: -100px;
+        visibility: hidden;
+    }
+    100% {
+        left: -200px;
+        visibility: hidden;
+    }
+}
+
+@keyframes alienflying {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -229px;
+    }
+}
+
+.jump {
+    width: 112px;
+    height: 156px;
+    background: url('../images/characters/tiraprueba-removebg-preview.png')left center;
+    margin-left: 200px;
+    transform: translateY(-150px);
+}
+
+@-webkit-keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        background-position: left top;
+    }
+    25% {
+        background-position: right bottom;
+    }
+    50% {
+        background-position: left bottom;
+    }
+    75% {
+        background-position: right top;
+    }
+}
+.similar_game img {
+    width: 60px;
+}
+
+.similares{
+    padding-top: 3rem !important;
+}

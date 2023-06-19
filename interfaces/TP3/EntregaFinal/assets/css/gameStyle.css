@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Josefin+Sans:wght@100;400&family=Staatliches&display=swap');
+.juego {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: -webkit-linear-gradient(top, #28fbb9 3%, #47abfa 100%, #47abfa 100%);
+    top: 4.5rem;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0;
+}
+
+.options a {
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+    width: 10%;
+    border-radius: 1rem;
+    font-family: 'Staatliches';
+    font-size: 1.5rem;
+    border-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.gameInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#theWinnerIs {
+    margin: 1rem auto;
+}
+
+.turno {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+}
+
+.turno h2 {
+    margin: 0;
+}
+
+#player1 {
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 3rem;
+}
+
+#player2 {
+    border-style: solid;
+    border-color: #e62222;
+    border-radius: 3rem;
+}
+
+.turno img {
+    width: 50px;
+}
+
+#cronometro {
+    margin-top: 0;
+}
+
+.exit {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.exit a {
+    text-decoration: none;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}

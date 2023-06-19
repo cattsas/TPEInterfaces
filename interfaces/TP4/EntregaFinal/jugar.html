@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/gameMenu.css">
+
+    <link rel="stylesheet" href="assets/css/gameStyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="hamburguesa">
+            <img src="assets/images/hamburguesa.png" alt="">
+        </div>
+        <div class="logo" id="logoGame">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt="">
+                <p class="oculto nombre_logo">Puro Vicio</p>
+            </a>
+        </div>
+        <div class="user">
+            <a href="registerForm.html"> <img src="assets/images/contacto.png" alt=""></a>
+        </div>
+    </header>
+    <nav class="menu">
+        <div class="header-menu">
+            <div class="logo">
+                <img src="assets/images/logo-gamer 1.png" alt="">
+            </div>
+            <div class="cerrar_menu">
+                <img src="assets/images/close.png" alt="">
+            </div>
+        </div>
+        <div class="subtitulo_menu">
+            <h3>Categorías</h3>
+        </div>
+        <ul class="botones_menu">
+            <li><a href="all.html">Todos los juegos </a></li>
+            <li><a href="category.html?category=Multijugador">Multijugador </a></li>
+            <li><a href="category.html?category=Accion">Acción </a></li>
+            <li><a href="category.html?category=Aventuras">Aventuras </a></li>
+            <li><a href="category.html?category=Carreras">Carreras</a> </li>
+            <li><a href="category.html?category=Clasicos">Clásicos</a> </li>
+            <li><a href="category.html?category=Infantiles">Infantiles </a></li>
+        </ul>
+    </nav>
+    <div id="init_juego" class="contMenu">
+
+
+
+
+        <div class="gameMen">
+            <div class="connect">
+                <img src="assets/images/connect4 title.png" alt="">
+            </div>
+            <div class="size">
+                <div class="title">
+                    <h2>Selecccione modo de juego</h2>
+                </div>
+                <label for="html">
+                      <input type="radio" class="cantidad"id="option1" name="boardSize" value="4" checked>
+                      <span>4 en línea</span>
+                    </label><br>
+                <label for="css">
+                    <input type="radio" class="cantidad" id="option2" name="boardSize" value="5">
+                    <span>5 en línea</span>
+                    </label><br>
+                <label for="javascript">
+                    <input type="radio" class="cantidad" id="javascript" name="boardSize" value="6">
+                    <span>6 en línea</span>
+                    </label><br>
+            </div>
+            <div class="playBtn">
+
+                <button id="btn_play" class=""><img class="" id="fichaBtn" src="assets/images/ficha1_2.png"><span> Jugar</span></button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="area ">
+        <ul class="circles ">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="area1">
+        <ul class="circles ">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+
+
+    <div id="contenedor_juego" class="juego inactive">
+        <!-- ACA IRIA JUGABILIDAD-->
+        <div class="options">
+            <a href="#" id="btn_reset" class=""><img class="" id="fichaBtn" src="assets/images/reiniciar-removebg-preview.png"><span> Reiniciar</span></a>
+            <div>
+                <h2 id="cantFichas"></h2>
+
+            </div>
+            <a href="jugar.html" id="btn_exit" class=""><img class="" id="fichaBtn" src="assets/images/cerrar-removebg-preview.png"><span> Salir</span></a>
+        </div>
+        <div class="gameInfo">
+            <div class="turno" id="player1">
+                <img src="assets/images/ficha1_2.png">
+                <h2>Turno jugador 1</h2>
+            </div>
+
+            <div id="theWinnerIs" class="inactive">
+                <h2 id="quienGano"></h2>
+                <h2 id="sinTiempo"></h2>
+            </div>
+
+            <div id="tmp">
+                <h2>Tiempo restante</h2>
+                <h2 id="cronometro"></h2>
+            </div>
+            <div class="turno invisible" id="player2">
+                <img src="assets/images/ficha2_2.png">
+                <h2>Turno jugador 2</h2>
+            </div>
+        </div>
+        <!-- ACA IRIA PANTALLA PRESENTACION DEL JUEGO-->
+
+        <section class="invisible" id="tablero">
+            <!-- ACA IRIA EL TABLERO DEL JUEGO-->
+            <canvas id="canvas" class="canvas" width="1200" height="800"></canvas>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt=""></a>
+        </div>
+        <!-- <div class="textRedes">
+
+            <div class="footer_texto">
+                <p>Privacidad</p>
+                <p>Cookies</p>
+            </div>
+            <div class="footer_texto">
+                <p>Términos de uso</p>
+                <p>Ayuda</p>
+            </div>-->
+
+
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Facebook.png" alt=""></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/akar-icons_instagram-fill.png" alt=""></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Vector.png" alt=""></a>
+        </div>
+        <!-- </div>-->
+    </footer>
+    <script src="assets/js/cronometro.js"></script>
+
+    <script src="assets/js/jugar.js"></script>
+    <script src="assets/js/tablero.js"></script>
+    <script src="assets/js/ficha.js"></script>
+    <script src="assets/js/juego.js"></script>
+
+</body>
+
+</html>

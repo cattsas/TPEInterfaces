@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puro Vicio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="shortcut icon" href="assets/images/logo-gamer 1.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/howplay.js"></script>
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"><img src="assets/images/logo-gamer 2.png" alt=""></span>
+            <div class="dots">
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <header class="header">
+        <div class="hamburguesa">
+            <img src="assets/images/hamburguesa.png" alt="">
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt=""></a>
+        </div>
+        <div class="user">
+            <div id="logIcon">
+                <a href="registerForm.html"> <img src="assets/images/contacto.png" alt=""></a>
+            </div>
+            <div id="logged" class="inactiveCont">
+                <a href="#"> <img src="assets/images/Ellipse 19.png" alt=""></a>
+                <a href="#"> <img src="assets/images/chevron.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <nav class="menu">
+        <div class="header-menu">
+            <div class="logo">
+                <img src="assets/images/logo-gamer 1.png" alt="">
+            </div>
+            <div class="cerrar_menu">
+                <img src="assets/images/close.png" alt="">
+            </div>
+        </div>
+        <div class="subtitulo_menu">
+            <h3>Categorías</h3>
+        </div>
+        <ul class="botones_menu">
+            <li><a href="all.html">Todos los juegos </a></li>
+            <li><a href="category.html?category=Multijugador">Multijugador </a></li>
+            <li><a href="category.html?category=Accion">Acción </a></li>
+            <li><a href="category.html?category=Aventuras">Aventuras </a></li>
+            <li><a href="category.html?category=Carreras">Carreras</a> </li>
+            <li><a href="category.html?category=Clasicos">Clásicos</a> </li>
+            <li><a href="category.html?category=Infantiles">Infantiles </a></li>
+        </ul>
+    </nav>
+    <aside class="modal">
+
+    </aside>
+    <main class="contenedor_principal">
+        <div id="game">
+            <div class="encabezado_juego_seleccionado">
+                <div class="titulo_juego_img">
+                    <img class="game_img" :src="img" alt="" srcset="">
+                    <div>
+                        <h2>{{name}}</h2>
+                        <p>{{category}}</p>
+                    </div>
+                </div>
+                <a href="https://api.whatsapp.com/send?text=Proba este juego" target="_blank"><img class="share" src="assets/images/share.png" alt=""></a>
+            </div>
+            <div class="how_to_play">
+                <div class="gifAndButton">
+                    <h2>Cómo jugar</h2>
+                    <img src="assets/images/demo.gif"></img>
+                    <div class="cont_btn_play">
+                        <a href="jugar.html" class="button_play jello-vertical">Jugar <img src="assets/images/play_arrow.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="textInstructions">
+                    <h3>Instrucciones</h3>
+                    <p>El juego de cuatro en línea es un juego de mesa muy sencillo que consiste en conseguir colocar cuatro fichas de tu mismo color consecutivas, lo que se conoce como conseguir un 4 en raya. Se juega siempre entre 2 jugadores y sobre un
+                        tablero. En cada turno cada jugador coloca una ficha de su color en una columna y esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del mismo color seguidas en horizontal, vertical u oblicuo gana. Si
+                        nadie lo consigue la partida termina en empate. También puedes elegir como variantes conseguir 5 o 6 fichas en línea para ganar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt=""></a>
+        </div>
+        <!-- <div class="textRedes">
+
+            <div class="footer_texto">
+                <p>Privacidad</p>
+                <p>Cookies</p>
+            </div>
+            <div class="footer_texto">
+                <p>Términos de uso</p>
+                <p>Ayuda</p>
+            </div>-->
+
+
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Facebook.png" alt=""></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/akar-icons_instagram-fill.png" alt=""></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Vector.png" alt=""></a>
+        </div>
+        <!-- </div>-->
+    </footer>
+</body>
+
+</html>

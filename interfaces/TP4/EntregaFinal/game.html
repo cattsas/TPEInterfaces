@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puro Vicio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/game.js"></script>
+    <link rel="shortcut icon" href="assets/images/logo-gamer 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"><img src="assets/images/logo-gamer 2.png" alt=""></span>
+            <div class="dots">
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+                <span><img src="assets/images/logo-gamer 2.png" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <header class="header">
+        <div class="hamburguesa">
+            <img src="assets/images/hamburguesa.png" alt="">
+        </div>
+        <div class="logo" id="logoGame">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt="">
+                <p class="oculto nombre_logo">Puro Vicio</p>
+            </a>
+        </div>
+        <div class="user">
+            <a href="registerForm.html"> <img src="assets/images/contacto.png" alt=""></a>
+        </div>
+    </header>
+    <nav class="menu">
+        <div class="header-menu">
+            <div class="logo">
+                <img src="assets/images/logo-gamer 1.png" alt="">
+            </div>
+            <div class="cerrar_menu">
+                <img src="assets/images/close.png" alt="">
+            </div>
+        </div>
+        <div class="subtitulo_menu">
+            <h3>Categorías</h3>
+        </div>
+        <ul class="botones_menu">
+            <li><a href="all.html">Todos los juegos </a></li>
+            <li><a href="category.html?category=Multijugador">Multijugador </a></li>
+            <li><a href="category.html?category=Accion">Acción </a></li>
+            <li><a href="category.html?category=Aventuras">Aventuras </a></li>
+            <li><a href="category.html?category=Carreras">Carreras</a> </li>
+            <li><a href="category.html?category=Clasicos">Clásicos</a> </li>
+            <li><a href="category.html?category=Infantiles">Infantiles </a></li>
+        </ul>
+    </nav>
+    <aside class="modal">
+
+    </aside>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="https://www.casualarena.com/bundles/app/st/games/co4/slider/es/conecta-4-01.jpg?3640363" alt=""></div>
+            <div class="swiper-slide"><img src="https://www.casualarena.com/bundles/app/st/games/co4/slider/es/conecta-4-02.jpg?3640363" alt=""></div>
+            <div class="swiper-slide"><img src="https://www.casualarena.com/bundles/app/st/games/co4/slider/es/conecta-4-03.jpg?3640363" alt=""></div>
+
+        </div>
+
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+    <main class="contenedor_principal">
+        <div id="game">
+            <div class="encabezado_juego_seleccionado">
+                <div class="titulo_juego_img">
+                    <img class="game_img" :src="img" alt="" srcset="">
+                    <div class="gameName">
+                        <h2>{{name}}</h2>
+                        <p>{{category}}</p>
+                        <div class="whatss desktop" id="shareDesktop">
+                            <a href="https://api.whatsapp.com/send?text=Proba este juego" target="_blank"><img class="share" src="assets/images/share.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="descripcion_juego desktop">
+                    <h3>Descripción</h3>
+                    <p>{{descripcion}}</p>
+                    <p><strong>Desarrollado por: </strong>{{desarrollador}}</p>
+                    <div class="como_jugar">
+                        <a :href="'howtoplay.html?id='+ id">
+                            <img class="info" src="assets/images/info.png" alt="">
+                        </a>
+                        <a :href="'howtoplay.html?id='+ id">
+
+                            <h3>Cómo jugar</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="whatss mobile">
+                    <a href="https://api.whatsapp.com/send?text=Proba este juego" target="_blank"><img class="share" src="assets/images/share.png" alt=""></a>
+                </div>
+            </div>
+            <div class="contenedor_carrousel">
+                <div class="container">
+                    <div class="carousel">
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                        <div class="carousel__face"></div>
+                    </div>
+                </div>
+                <div id="relleno">
+
+                </div>
+                <a href="jugar.html" class="button_play jello-vertical">Jugar <img src="assets/images/play_arrow.png" alt=""></a>
+            </div>
+            <div class="descripcion_juego mobile">
+                <h3>Descripción</h3>
+                <p>{{descripcion}}</p>
+                <p><strong>Desarrollado por: </strong>{{desarrollador}}</p>
+                <div class="como_jugar">
+                    <a :href="'howtoplay.html?id='+ id">
+                        <img class="info" src="assets/images/info.png" alt="">
+                    </a>
+                    <a :href="'howtoplay.html?id='+ id">
+
+                        <h3>Cómo jugar</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="similares">
+            <h3>Juegos similares</h3>
+            <div id="games">
+                <div v-for="item in listGames" class="similar_game">
+                    <a :href="'game.html?id='+item.id">
+                        <img :src="item.img" alt="">
+                        <figcaption>
+                            <p>{{item.name}}</p>
+                    </a>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo-gamer 1.png" alt=""></a>
+        </div>
+        <!-- <div class="textRedes">
+
+            <div class="footer_texto">
+                <p>Privacidad</p>
+                <p>Cookies</p>
+            </div>
+            <div class="footer_texto">
+                <p>Términos de uso</p>
+                <p>Ayuda</p>
+            </div>-->
+
+
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Facebook.png" alt=""></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/akar-icons_instagram-fill.png" alt=""></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img class="socialIcon" src="assets/images/Redes footer/Vector.png" alt=""></a>
+        </div>
+        <!-- </div>-->
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });
+    </script>
+</body>
+
+</html>

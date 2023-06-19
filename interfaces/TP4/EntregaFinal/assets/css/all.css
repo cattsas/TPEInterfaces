@@ -1,0 +1,65 @@
+html,
+body {
+    height: 100%;
+    background-color: #C2C4D2;
+}
+
+.allSearch {
+    position: relative;
+    padding: 0.5rem;
+    top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allSearch div {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#buscaAll {
+    width: 60%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+#buscaAll input {
+    height: 70%;
+    margin-top: 0.2rem;
+}
+
+.buscaCat {
+    margin-top: 1rem;
+    ;
+}
+
+.buscaCat select {
+    width: 19rem;
+    height: 2.5rem;
+}
+
+.entryButtons {
+    position: relative;
+    top: 4.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.entryButtons a {
+    width: 11.5rem;
+    height: 2.5rem;
+    border-radius: 00.5rem;
+    background-color: #A3C540;
+    color: white;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.entryButtons img {
+    width: 30px;
+    margin-top: 0.2rem;
+    color: white;
+    margin-left: 0.5rem;
+}

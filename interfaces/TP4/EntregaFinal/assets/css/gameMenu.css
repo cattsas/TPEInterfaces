@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Josefin+Sans:wght@100;400&family=Staatliches&display=swap');
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: red;
+    z-index: -5;
+}
+
+h2 {
+    font-family: "Staatliches", cursive;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.contMenu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: -5;
+    /*  background: -webkit-linear-gradient(top, #28fbb9 3%, #47abfa 100%, #47abfa 100%);*/
+}
+
+.imgCont {
+    position: relative;
+    top: 4.5rem;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.imgCont img {
+    width: 100%;
+    display: block;
+    z-index: 1;
+    margin-top: 2rem;
+}
+
+.connect {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gameMen img {
+    width: 60%;
+}
+
+.gameMen {
+    position: relative;
+    top: 4.5rem;
+    background: -webkit-linear-gradient(top, #28fbb9 3%, #47abfa 100%, #47abfa 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+.size {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.playBtn {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+}
+
+.playBtn a {
+    text-decoration: none;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.playBtn button {
+    text-decoration: none;
+    color: white;
+    height: 4rem;
+    width: 80%;
+    border-radius: 1rem;
+    background-color: #FF9700;
+    border-style: none;
+    display: flex;
+
+    align-items: center;
+}
+
+.playBtn span {
+    font-family: "Staatliches", cursive;
+    font-size: 2rem;
+    text-align:center;
+}
+
+.rotate-hor-center {
+    -webkit-animation: rotate-hor-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: rotate-hor-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+.playBtn button:hover {
+    box-shadow: #D88000 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.playBtn button:hover img {
+    -webkit-animation: rotate-hor-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: rotate-hor-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+#fichaBtn {
+    width: 50px;
+    background-position: 50% 50%;
+}
+
+h2 {
+    text-align: center;
+}
+
+label span {
+    font-size: 1.5rem;
+    font-family: "Staatliches", cursive;
+}
+
+.area {
+    width: 100%;
+    z-index: -2;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.circles {
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 90px;
+    height: 90px;
+    animation: animate 20s linear infinite;
+    top: -150px;
+    background-image: url('../images/ficha2_2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -2;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    z-index: -2;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.area1 {
+    width: 100%;
+    z-index: -2;
+}
+
+.area1 .circles {
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.area1 .circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 90px;
+    height: 90px;
+    animation: animate 10s linear infinite;
+    top: -150px;
+    background-image: url('../images/ficha1_2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.area1 .circles li:nth-child(1) {
+    left: 25%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 3s;
+}
+
+.area1.circles li:nth-child(2) {
+    left: 10%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
+
+.area1 .circles li:nth-child(3) {
+    left: 70%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 6s;
+}
+
+.area1 .circles li:nth-child(4) {
+    left: 40%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+.area1 .circles li:nth-child(5) {
+    left: 65%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 5s;
+}
+
+.area1 .circles li:nth-child(6) {
+    left: 75%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 9s;
+}
+
+.area1 .circles li:nth-child(7) {
+    left: 35%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 17s;
+}
+
+.area1 .circles li:nth-child(8) {
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 8s;
+    animation-duration: 45s;
+}
+
+.area1 .circles li:nth-child(9) {
+    left: 20%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 7s;
+    animation-duration: 35s;
+}
+
+.area1 .circles li:nth-child(10) {
+    left: 85%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        /* border-radius: 0;*/
+    }
+    100% {
+        transform: translateY(1000px) rotate(720deg);
+        opacity: 1;
+        /* border-radius: 50%;*/
+    }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-6-19 19:20:9
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-hor-center
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+@keyframes rotate-hor-center {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+    100% {
+        -webkit-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
